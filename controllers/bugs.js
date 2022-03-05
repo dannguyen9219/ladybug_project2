@@ -40,6 +40,16 @@ router.get('/seed', (req, res) => {
 });
 
 // Index Route //
+router.get('/', (req, res) => {
+    Bug.find({})
+        .then((bugs) => {
+            res.render('bugs/Index', { bugs });
+        })
+        .catch((error) => {
+            res.json({ error })
+        })
+});
+
 // New Route //
 // Delete Route //
 // Update Route //
