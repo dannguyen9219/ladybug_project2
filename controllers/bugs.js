@@ -54,7 +54,19 @@ router.get('/', (req, res) => {
 // Delete Route //
 // Update Route //
 // Create Route //
+
 // Show Route //
+router.get('/:id', (req, res) => {
+    const { id } = req.params
+
+    Bug.findById(id)
+        .then((bug) => {
+            res.render('bugs/Show', { bug })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
 
 
 module.exports = router;
