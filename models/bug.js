@@ -5,19 +5,15 @@ const { Schema, model } = mongoose;
 const bugSchema = new Schema({
     title: {
         type: String,
-        required: true,
     },
     ticketStatus: {
         type: String,
-        required: true,
     },
     description: {
         type: String,
-        required: true,
     },
     priority: {
         type: String,
-        required: true,
     },
 });
 

@@ -57,7 +57,20 @@ router.get('/new', (req, res) => {
 
 // Delete Route //
 // Update Route //
+
+
 // Create Route //
+router.post('/', (req, res) => {
+    Bug.create(req.body)
+        .then((createdBug) => {
+            res.redirect(`/bugs/${createdBug._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
+
+// Edit Route //
 
 // Show Route //
 router.get('/:id', (req, res) => {
