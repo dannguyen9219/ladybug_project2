@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
+const path = require('path');
 
 
 // Views Express Application Object Engine //
@@ -22,5 +23,5 @@ app.get('/', (req, res) => {
 });
 
 // Server Listener //
-const PORT = 9000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
