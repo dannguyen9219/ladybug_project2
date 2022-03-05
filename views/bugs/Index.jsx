@@ -6,6 +6,7 @@ class Index extends React.Component {
         const { bugs } = this.props;
         return(
             <DefaultLayout>
+                <a href="/bugs/new"><button>Create New Support Ticket</button></a>
                 <div>
                     {
                         bugs.map((bug) => (

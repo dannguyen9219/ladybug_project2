@@ -51,6 +51,10 @@ router.get('/', (req, res) => {
 });
 
 // New Route //
+router.get('/new', (req, res) => {
+    res.render('bugs/New')
+});
+
 // Delete Route //
 // Update Route //
 // Create Route //
