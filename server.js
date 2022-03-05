@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
+const bugController = require('./controllers/bugs.js');
 const path = require('path');
 
 
@@ -21,6 +22,9 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.send(`Bugs aren't the problems, they are the features!`)
 });
+
+// Controller Route //
+app.use('/bugs', bugController);
 
 // Server Listener //
 const PORT = process.env.PORT;
