@@ -56,8 +56,20 @@ router.get('/new', (req, res) => {
 });
 
 // Delete Route //
-// Update Route //
 
+
+// Update Route //
+router.put('/:id', (req, res) => {
+    const { id } = req.params;
+
+    Bug.findByIdAndUpdate(id, req.body, { new: true })
+        .then((updatedBug) => {
+            res.redirect(`/bugs/${updatedBug._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
 
 // Create Route //
 router.post('/', (req, res) => {
