@@ -39,7 +39,7 @@ class Edit extends React.Component {
                                         </li>
                                         <li>
                                             <h3>Description</h3>
-                                            <input type="text" id="description" name="description" defaultValue = {bug.description}></input>
+                                            <textarea id="description" name="description" defaultValue = {bug.description}></textarea>
                                         </li>
                                         <li>
                                             <h3>Priority</h3>

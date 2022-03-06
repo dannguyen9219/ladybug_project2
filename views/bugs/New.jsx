@@ -6,6 +6,7 @@ class New extends React.Component {
     render() {
         return(
             <DefaultLayout>
+                <a href="/bugs/"><button>Back to Main Index</button></a>
                 <form action="/bugs" method="post">
                     <fieldset>
                         <div>
@@ -38,7 +39,7 @@ class New extends React.Component {
                                         </li>
                                         <li>
                                             <h3>Description</h3>
-                                            <input type="text" id="description" name="description"></input>
+                                            <textarea id="description" name="description"></textarea>
                                         </li>
                                         <li>
                                             <h3>Priority</h3>

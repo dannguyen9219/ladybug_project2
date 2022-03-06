@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 // Listening Route //
 app.get('/', (req, res) => {
-    res.send(`Bugs aren't the problems, they are the features!`)
+    res.render('start/First')
 });
 
 // Controller Route //
