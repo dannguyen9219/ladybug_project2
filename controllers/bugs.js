@@ -56,7 +56,16 @@ router.get('/new', (req, res) => {
 });
 
 // Delete Route //
-
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+    Bug.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/bugs')
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
 
 // Update Route //
 router.put('/:id', (req, res) => {
