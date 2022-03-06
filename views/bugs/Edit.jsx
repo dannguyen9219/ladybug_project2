@@ -2,19 +2,20 @@ const React = require('react');
 const DefaultLayout = require('../Default.jsx');
 
 
-class New extends React.Component {
+class Edit extends React.Component {
     render() {
+        const { bug } =this.props;
         return(
             <DefaultLayout>
-                <form action="/bugs" method="post">
+                <form action={`/bugs/${bug._id}?_method=PUT`} method="post">
                     <fieldset>
                         <div>
-                            <h1>Enter New Support Ticket</h1>
-                            <div>
+                            <h1>Edit {bug.title}</h1>
+                                <div>
                                     <ul>
                                         <li>
                                             <h3>Title</h3>
-                                            <input type="text" id="title" name="title"></input>
+                                            <input type="text" id="title" name="title" defaultValue = {bug.title}></input>
                                         </li>
                                         <li>
                                             <h3>Ticket Status</h3>
@@ -26,7 +27,7 @@ class New extends React.Component {
                                         </li>
                                         <li>
                                             <h3>Description</h3>
-                                            <input type="text" id="description" name="description"></input>
+                                            <input type="text" id="description" name="description" defaultValue = {bug.description}></input>
                                         </li>
                                         <li>
                                             <h3>Priority</h3>
@@ -37,10 +38,10 @@ class New extends React.Component {
                                             </select>
                                         </li>
                                     </ul>
-                            </div>
+                                </div>
                         </div>
                     </fieldset>
-                    <input type="submit" value="Create New Ticket" />
+                    <input type="submit" value="Edit Ticket" />
                 </form>
             </DefaultLayout>
         )
@@ -48,4 +49,4 @@ class New extends React.Component {
 };
 
 
-module.exports = New;
+module.exports = Edit;

@@ -71,6 +71,16 @@ router.post('/', (req, res) => {
 });
 
 // Edit Route //
+router.get('/:id/edit', (req, res) => {
+    const { id } = req.params
+    Bug.findById(id)
+        .then((bug) => {
+            res.render('bugs/Edit', { bug })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
 
 // Show Route //
 router.get('/:id', (req, res) => {
