@@ -9,6 +9,7 @@ class Show extends React.Component {
                 <div>
                     <article>
                         <h2>Support Ticket Subject: {bug.title}</h2>
+                        <h2>Category: {bug.category}</h2>
                         <h2>Status: {bug.ticketStatus}</h2>
                         <h2>Description: {bug.description}</h2>
                         <h2>Priority: {bug.priority}</h2>

@@ -6,6 +6,9 @@ const bugSchema = new Schema({
     title: {
         type: String,
     },
+    category: {
+        type: String,
+    },
     ticketStatus: {
         type: String,
     },

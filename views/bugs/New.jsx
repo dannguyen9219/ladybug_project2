@@ -17,6 +17,18 @@ class New extends React.Component {
                                             <input type="text" id="title" name="title"></input>
                                         </li>
                                         <li>
+                                            <h3>Category</h3>
+                                            <select name="category" id="category">
+                                                <option value="Software/Hardware Question">Software/Hardware Question</option>
+                                                <option value="Software/Hardware Issue">Software/Hardware Issue</option>
+                                                <option value="Software/Hardware Training">Software/Hardware Training</option>
+                                                <option value="Frontend Issue">Frontend Issue</option>
+                                                <option value="Backend Issue">Backend Issue</option>
+                                                <option value="Database Issue">Database Issue</option>
+                                                <option value="Deployment Issue">Deployment Issue</option>
+                                            </select>
+                                        </li>
+                                        <li>
                                             <h3>Ticket Status</h3>
                                             <select name="ticketStatus" id="ticketStatus">
                                                 <option value="Open">Open</option>
@@ -31,9 +43,9 @@ class New extends React.Component {
                                         <li>
                                             <h3>Priority</h3>
                                             <select name="priority" id="priority">
-                                                <option value="High">High</option>
-                                                <option value="Medium">Medium</option>
                                                 <option value="Low">Low</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="High">High</option>
                                             </select>
                                         </li>
                                     </ul>
