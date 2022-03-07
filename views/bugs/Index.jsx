@@ -12,7 +12,7 @@ class Index extends React.Component {
                         bugs.map((bug) => (
                             <article>
                                 <a href={`/bugs/${ bug._id }`}>
-                                    <h3>Support Ticket Subject: {bug.title}</h3>
+                                    <h3>Support Ticket: {bug.title}</h3>
                                 </a>
                             </article>
                         ))

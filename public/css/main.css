@@ -1,0 +1,17 @@
+body {
+    background-color: beige;
+}
+
+header {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#nav-btns {
+    padding: 10px 0;
+    margin: 0 5px;
+}
