@@ -17,6 +17,7 @@ class DefaultLayout extends React.Component {
                     ></script>
 
                     <link rel="stylesheet" href="/css/main.css" />
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
                 </head>
 
                 <body>
@@ -32,7 +33,9 @@ class DefaultLayout extends React.Component {
                     </header>
 
                     <main>
-                        {this.props.children}
+                        <div id="propsChildren">
+                            {this.props.children}
+                        </div>
                     </main>
 
                     <footer>

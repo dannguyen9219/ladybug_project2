@@ -5,6 +5,7 @@ class Index extends React.Component {
     render() {
         const { bugs } = this.props;
         return(
+            <html>
             <DefaultLayout>
                 <a href="/bugs/new"><button>Create New Support Ticket</button></a>
                 <div>
@@ -19,6 +20,7 @@ class Index extends React.Component {
                     }
                 </div>
             </DefaultLayout>
+            </html>
         )
     }
 };
