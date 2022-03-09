@@ -4,8 +4,10 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const bugController = require('./controllers/bugs.js');
-const UserRouter = require('./controllers/user.js')
+const UserRouter = require('./controllers/user.js');
 const path = require('path');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 
 // Views Express Application Object Engine //
@@ -19,12 +21,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
+app.use(
+    session({
+        secret: process.env.SECRET,
+        store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+        saveUninitialized: true,
+        resave: false,
+    })
+);
+
 // Listening Route //
 app.get('/', (req, res) => {
-    res.render('start/First')
+    res.render('Index')
 });
 
-// Controller Route //
+// Controller Routes //
 app.use('/bugs', bugController);
 app.use('/user', UserRouter);
 

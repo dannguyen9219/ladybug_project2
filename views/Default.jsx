@@ -27,7 +27,7 @@ class DefaultLayout extends React.Component {
                             <nav id="nav-btns">
                                 <a href="/bugs/">Home</a>
                                 <a href="/bugs/New">New Ticket</a>
-                                <a>Sign Out</a>
+                                <a href="/user/logout"><button>Logout</button></a>
                             </nav>
                         </div>
                     </header>

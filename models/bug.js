@@ -18,6 +18,9 @@ const bugSchema = new Schema({
     priority: {
         type: String,
     },
+    username: {
+        type: String,
+    },
 });
 
 const Bug = model('Bug', bugSchema);

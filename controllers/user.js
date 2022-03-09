@@ -11,18 +11,59 @@ router.get('/signup', (req, res) => {
     res.render('user/Signup.jsx')
 });
 
-router.post('/signup', (req, res) => {
-    res.send('signup')
-});
-
 
 // Login Routes //
 router.get('/login', (req, res) => {
     res.render('user/Login.jsx')
 });
 
-router.post('/login', (req, res) => {
-    res.send('login')
+
+// Signup Post Response //
+router.post('/signup', async (req, res) => {
+    req.body.password = await bcrypt.hash(
+        req.body.password,
+        await bcrypt.genSalt(10)
+    );
+    User.create(req.body)
+        .then((user) => {
+            res.redirect('/user/login')
+        })
+        .catch((error) => {
+            console.log(error)
+            res.json({ error })
+        })
+});
+
+
+// Login Post Response //
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    User.findOne({ username })
+        .then(async (user) => {
+            if (user) {
+                const result = await bcrypt.compare(password, user.password);
+                if (result) {
+                    req.session.username = username;
+                    req.session.loggedIn = true;
+                    res.redirect('/bugs');
+                }   else {
+                    res.json({ error: "password does not match" });
+                }
+            }   else {
+                res.json({ error: "user does not exist" });
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+            res.json({ error })
+        })
+});
+
+// Logout Route //
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        res.redirect('/')
+    })
 });
 
 

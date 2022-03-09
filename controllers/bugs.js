@@ -2,6 +2,15 @@ const express = require('express');
 const Bug = require('../models/bug.js');
 const router = express.Router('../models/bug.js');
 
+// Router Middleware for Authorization //
+router.use((req, res, next) => {
+    if (req.session.loggedIn) {
+        next()
+    }   else {
+        res.redirect('/user/login')
+    }
+});
+
 // Seed Route //
 router.get('/seed', (req, res) => {
     const startBugs = [
@@ -41,11 +50,12 @@ router.get('/seed', (req, res) => {
 
 // Index Route //
 router.get('/', (req, res) => {
-    Bug.find({})
+    Bug.find({ username: req.session.username })
         .then((bugs) => {
             res.render('bugs/Index', { bugs });
         })
         .catch((error) => {
+            console.log(error)
             res.json({ error })
         })
 });
@@ -82,6 +92,7 @@ router.put('/:id', (req, res) => {
 
 // Create Route //
 router.post('/', (req, res) => {
+    req.body.username = req.session.username;
     Bug.create(req.body)
         .then((createdBug) => {
             res.redirect(`/bugs/${createdBug._id}`)
