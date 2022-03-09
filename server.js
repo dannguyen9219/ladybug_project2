@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const bugController = require('./controllers/bugs.js');
+const UserRouter = require('./controllers/user.js')
 const path = require('path');
 
 
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 // Controller Route //
 app.use('/bugs', bugController);
+app.use('/user', UserRouter);
 
 // Server Listener //
 const PORT = process.env.PORT;

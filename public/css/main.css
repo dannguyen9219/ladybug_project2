@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: beige;
+    background-color: white;
     font-family: Roboto;
 }
 
@@ -28,6 +28,17 @@ header {
     border-radius: 10px;
     border-bottom: 1px solid grey;
     border: 1px solid black;
+}
+
+h2 {
+    font-size: small;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+h2#title {
+    font-size: medium;
+    font-weight: 600;
 }
 
 #nav-btns {

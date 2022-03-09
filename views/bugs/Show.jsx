@@ -15,8 +15,9 @@ class Show extends React.Component {
                     <script
                         src="https://code.jquery.com/jquery-3.6.0.min.js"
                         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-                        crossOrigin="anonymous"
-                    ></script>
+                        crossOrigin="anonymous">
+                    </script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"></link>
 
                     <link rel="stylesheet" href="/css/main.css" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
@@ -36,11 +37,13 @@ class Show extends React.Component {
                     <main>
                         <div>
                             <article>
-                                <h2>Support Ticket Subject: {bug.title}</h2>
-                                <h2>Category: {bug.category}</h2>
-                                <h2>Status: {bug.ticketStatus}</h2>
-                                <h2>Description: {bug.description}</h2>
-                                <h2>Priority: {bug.priority}</h2>
+                                <div id="bugsList">
+                                    <h2 id="title">LadyBug: {bug.title}</h2>
+                                    <h2 id="category">Category: {bug.category}</h2>
+                                    <h2 id="status">Status: {bug.ticketStatus}</h2>
+                                    <h2 id="description">Description: {bug.description}</h2>
+                                    <h2 id="priority">Priority: {bug.priority}</h2>
+                                </div>
                                 <div id="nav2-btns">
                                     <a href={`/bugs/${ bug._id }/edit`}><button>Edit</button></a>
                                     <form action={`/bugs/${ bug._id }?_method=DELETE`} method="POST">
