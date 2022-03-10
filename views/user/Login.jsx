@@ -14,23 +14,23 @@ class Login extends React.Component {
                     <link rel="stylesheet" href="/css/main.css" />
                     <link rel="stylesheet" href="/css/login.css" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
-                    <title>LadyBug - Bug Tracker App</title>
+                    <title>LadyBug | Bug Tracker</title>
+                    <link rel="shortcut icon" href="/assets/ladybugLogo-plain-transparent.png"></link>
                 </head>
 
                 <body>
                 <header>
-                <h1> LadyBug - A Bug Tracker App </h1>
-                    <div>
-                        <nav id="nav-btns">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <ul class="nav justify-content-end">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/bugs/"><button type="button" class="btn btn-outline-light">Home</button></a>
+                                <li>
+                                    <a class="navbar-brand" href="/bugs/">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/bugs/New"><button type="button" class="btn btn-outline-light">New Ticket</button></a>
+                                <li>
+                                    <a class="navbar-brand" href="/bugs/New">New Ticket</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/user/logout"><button type="button" class="btn btn-outline-light">Logout</button></a>
+                                <li>
+                                    <a class="navbar-brand" href="/user/logout">Logout</a>
                                 </li>
                             </ul>
                         </nav>
@@ -39,7 +39,7 @@ class Login extends React.Component {
 
                 <div>
                     <form action="/user/login" method="POST">
-                        <fieldset>
+                        <fieldset id="fieldset">
                             <legend>User Login</legend>
                             <div class="form-floating mb-3">
                                 <input name="username" type="username" class="form-control" id="floatingInput" placeholder="Username" />
@@ -49,8 +49,8 @@ class Login extends React.Component {
                                 <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" />
                                 <label for="floatingPassword">Password</label>
                             </div>
+                            <input id="submitBtn" class="btn btn-light" type="submit" value="Login" />
                         </fieldset>
-                        <input type="submit" value="Login" />
                     </form>
                 </div>
 

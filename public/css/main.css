@@ -19,13 +19,16 @@ main {
 }
 
 header {
+    background-color: rgb(231, 238, 238);
     padding: 0 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
     border-bottom: 1px solid grey;
-    border: 1px solid black;
+}
+
+#signuplogintext {
+    margin: 0 2.5%;
 }
 
 .btn {
