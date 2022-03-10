@@ -5,18 +5,37 @@ const DefaultLayout = require('../Default.jsx');
 class Signup extends React.Component {
     render() {
         return(
-            <DefaultLayout>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
+                <link rel="stylesheet" href="/css/main.css" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
+                <title>LadyBug - Bug Tracker App</title>
+            </head>
+            <body>
                 <div>
-                    <form action="/user/signup" method="post">
+                    <form action="/user/signup" method="POST">
                         <fieldset>
                             <legend>New User</legend>
-                            <label>USERNAME: <input type="text" name="username" required /></label>
-                            <label>PASSWORD: <input type="password" name="password" required /></label>
-                            <input type="submit" value="Create Account" />
+                            <div class="form-floating mb-3">
+                                <input name="username" type="username" class="form-control" id="floatingInput" placeholder="Username" />
+                                <label for="floatingInput">Username</label>
+                            </div>
+                            <div class="form-floating">
+                                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                                <label for="floatingPassword">Password</label>
+                            </div>
                         </fieldset>
+                        <input type="submit" value="Create Account" />
                     </form>
                 </div>
-            </DefaultLayout>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            </body>
+            </html>
         )
     }
 };

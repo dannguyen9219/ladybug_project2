@@ -1,0 +1,35 @@
+body {
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+    background-color: #00c2cb;
+}
+
+#intro {
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.logo {
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    margin: 6% auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 5px 2.5px 5px 0px rgb(38, 36, 36);
+}
+
+.btn {
+    font-family: Roboto;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0 1%;
+}
+
+#loginbtns {
+    text-align: center;
+}

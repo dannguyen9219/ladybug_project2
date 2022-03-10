@@ -20,6 +20,7 @@ router.get('/login', (req, res) => {
 
 // Signup Post Response //
 router.post('/signup', async (req, res) => {
+    console.log(req.body)
     req.body.password = await bcrypt.hash(
         req.body.password,
         await bcrypt.genSalt(10)
