@@ -50,7 +50,9 @@ router.get('/seed', (req, res) => {
 
 // Index Route //
 router.get('/', (req, res) => {
-    Bug.find({ username: req.session.username })
+    if (req.session.username === "admin") {
+        //find all bugs//
+        Bug.find({})
         .then((bugs) => {
             res.render('bugs/Index', { bugs });
         })
@@ -58,6 +60,16 @@ router.get('/', (req, res) => {
             console.log(error)
             res.json({ error })
         })
+    }   else {
+        Bug.find({ username: req.session.username })
+        .then((bugs) => {
+            res.render('bugs/Index', { bugs });
+        })
+        .catch((error) => {
+            console.log(error)
+            res.json({ error })
+        })
+    }
 });
 
 // New Route //
