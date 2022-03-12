@@ -3,6 +3,20 @@ body {
     font-family: Roboto;
 }
 
+#main-nav-bar {
+    padding: 0;
+}
+
+#ladybugLogo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+#test {
+    font-size: 1.5rem;
+}
+
 /* main {
     font-family: Roboto;
     background: white;
@@ -45,6 +59,7 @@ body {
 
 .btn {
     color: black;
+    margin-right: 2%;
 }
 
 #editBtn {

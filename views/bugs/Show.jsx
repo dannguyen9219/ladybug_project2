@@ -7,7 +7,7 @@ class Show extends React.Component {
         return(
             <DefaultLayout>
                     <main>
-                        <div class="card index-card">
+                        <div class="card index-card border border-3">
                             <div class="card-header">
                                 <h2 id="title">LadyBug: {bug.title}</h2>
                             </div>

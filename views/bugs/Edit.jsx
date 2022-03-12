@@ -9,7 +9,7 @@ class Edit extends React.Component {
             <DefaultLayout>
                 <form action={`/bugs/${bug._id}?_method=PUT`} method="POST">
                     <fieldset>
-                        <div class="card index-card">
+                        <div class="card index-card border border-3">
                             <div class="card-header">
                                 <h1 id="edit-text">Edit {bug.title}</h1>
                             </div>
@@ -56,7 +56,8 @@ class Edit extends React.Component {
                         </div>
                     </fieldset>
                     <div id="editBtn2">
-                        <input type="submit" class="btn btn-outline-primary" value="Edit Ticket" />
+                        <input type="submit" class="btn btn-outline-primary" value="Save" />
+                        <a href={`/bugs/${ bug._id }`}><button class="btn btn-outline-primary">Cancel</button></a>
                     </div>
                 </form>
             </DefaultLayout>

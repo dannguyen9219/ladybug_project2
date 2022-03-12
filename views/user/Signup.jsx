@@ -27,9 +27,6 @@ class Signup extends React.Component {
                                     <img src="/assets/ladybugLogo-plain-transparent.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />Home</a>
                                 </li>
                                 <li>
-                                    <a class="navbar-brand" href="/bugs/New">New Ticket</a>
-                                </li>
-                                <li>
                                     <a class="navbar-brand" href="/user/logout">Logout</a>
                                 </li>
                             </ul>

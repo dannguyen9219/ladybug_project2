@@ -6,7 +6,7 @@ class Index extends React.Component {
         const { bugs } = this.props;
         return(
             <DefaultLayout>
-                <div class="card index-card">
+                <div class="card index-card border border-3">
                     <div class="card-header">
                         <h2 id="home-text">Home: All Bugs</h2>
                     </div>

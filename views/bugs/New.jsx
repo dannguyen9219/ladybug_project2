@@ -8,7 +8,7 @@ class New extends React.Component {
             <DefaultLayout>
                 <form action="/bugs" method="POST">
                     <fieldset>
-                        <div class="card index-card">
+                        <div class="card index-card border border-3">
                             <div class="card-header">
                                 <h2 id="new-text">Enter New Ladybug</h2>
                             </div>
