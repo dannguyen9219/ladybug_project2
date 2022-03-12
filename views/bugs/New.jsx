@@ -42,7 +42,7 @@ class New extends React.Component {
                                         </li>
                                         <li>
                                             <label for="description" class="form-label">Description</label>
-                                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description"></textarea>
+                                            <textarea class="form-control" name="description" id="description" rows="5" placeholder="Description"></textarea>
                                         </li>
                                         <li>
                                             <label for="priority" class="form-label">Priority</label>
@@ -58,7 +58,7 @@ class New extends React.Component {
                         </div>
                     </fieldset>
                     <div id="createBtn">
-                        <input type="submit" className="btn btn-outline-primary" value="Create New Ladybug" />
+                        <input type="submit" class="btn btn-outline-primary" value="Create New Ladybug" />
                     </div>
                 </form>
             </DefaultLayout>

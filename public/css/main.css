@@ -39,11 +39,19 @@ body {
     list-style: none;
 }
 
+#editList {
+    list-style: none;
+}
+
 .btn {
     color: black;
 }
 
 #editBtn {
+    margin: 1% 0% 0% 20%;
+}
+
+#editBtn2 {
     margin: 1% 0% 0% 20%;
 }
 
