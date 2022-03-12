@@ -6,7 +6,7 @@ class New extends React.Component {
     render() {
         return(
             <DefaultLayout>
-                <form action="/bugs" method="post">
+                <form action="/bugs" method="POST">
                     <fieldset>
                         <div class="card index-card">
                             <div class="card-header">
@@ -15,12 +15,12 @@ class New extends React.Component {
                                 <div class="mb-3 card-body">
                                     <ul id="newList">
                                         <li>
-                                            <label for="bugTitle" class="form-label">Title</label>
-                                            <input type="text" class="form-control" id="bugTitle" placeholder="Title"></input>
+                                            <label for="title" class="form-label">Title</label>
+                                            <input type="text" class="form-control" name="title" id="title" placeholder="Title"></input>
                                         </li>
                                         <li>
-                                            <label for="bugCategory" class="form-label">Category</label>
-                                            <select class="form-select" id="bugCategory">
+                                            <label for="category" class="form-label">Category</label>
+                                            <select class="form-select" name="category" id="category">
                                                 <option selected>Choose...</option>
                                                 <option value="Software/Hardware Question">Software/Hardware Question</option>
                                                 <option value="Software/Hardware Issue">Software/Hardware Issue</option>
@@ -32,8 +32,8 @@ class New extends React.Component {
                                             </select>
                                         </li>
                                         <li>
-                                            <label for="bugStatus" class="form-label">Status</label>
-                                            <select class="form-select" id="bugStatus">
+                                            <label for="ticketStatus" class="form-label">Status</label>
+                                            <select class="form-select" name="ticketStatus" id="ticketStatus">
                                                 <option selected>Choose...</option>
                                                 <option value="Open">Open</option>
                                                 <option value="In-Progress">In-Progress</option>
@@ -41,12 +41,12 @@ class New extends React.Component {
                                             </select>
                                         </li>
                                         <li>
-                                            <label for="bugDescription" class="form-label">Description</label>
-                                            <textarea class="form-control" id="bugDescription" rows="3" placeholder="Description"></textarea>
+                                            <label for="description" class="form-label">Description</label>
+                                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Description"></textarea>
                                         </li>
                                         <li>
-                                            <label for="bugPriority" class="form-label">Priority</label>
-                                            <select class="form-select" id="bugPriority">
+                                            <label for="priority" class="form-label">Priority</label>
+                                            <select class="form-select" name="priority" id="priority">
                                                 <option selected>Choose...</option>
                                                 <option value="Low">Low</option>
                                                 <option value="Medium">Medium</option>
@@ -58,7 +58,7 @@ class New extends React.Component {
                         </div>
                     </fieldset>
                     <div id="createBtn">
-                        <input type="submit" class="btn btn-outline-primary" value="Create New Ladybug" />
+                        <input type="submit" className="btn btn-outline-primary" value="Create New Ladybug" />
                     </div>
                 </form>
             </DefaultLayout>

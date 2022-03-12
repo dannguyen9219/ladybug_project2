@@ -7,7 +7,7 @@ class Edit extends React.Component {
         const { bug } =this.props;
         return(
             <DefaultLayout>
-                <form action={`/bugs/${bug._id}?_method=PUT`} method="post">
+                <form action={`/bugs/${bug._id}?_method=PUT`} method="POST">
                     <fieldset>
                         <div>
                             <h1>Edit {bug.title}</h1>
