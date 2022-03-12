@@ -25,7 +25,7 @@ class Show extends React.Component {
                         <div id="editBtn" class="btn-group" role="group">
                             <a href={`/bugs/${ bug._id }/edit`}><button type="button" class="btn btn-outline-primary">Edit</button></a>
                             <form action={`/bugs/${ bug._id }?_method=DELETE`} method="POST">
-                                <input type="submit" class="btn btn-outline-primary"value="Delete"/></form>
+                                <input type="submit" class="btn btn-outline-primary" value="Delete"/></form>
                         </div>
                     </main>
 
