@@ -19,7 +19,7 @@ body {
 } */
 
 .index-card {
-    margin: 10% 20%;
+    margin: 7% 20% 0% 20%;
 }
 
 /* header {
@@ -39,14 +39,19 @@ body {
     color: black;
 }
 
+#editBtn {
+    margin: 1% 0% 0% 20%;
+}
+
 h2#home-text {
     font-size: x-large;
-    margin: 17px 0px 5px 17px;
+    margin: 0px 0px 0px 0px;
 }
 
 h2#title {
-    font-size: medium;
-    font-weight: 600;
+    font-size: x-large;
+    margin: 0px 0px 0px 0px;
+    /* font-weight: 600; */
 }
 
 /* #nav-btns {
