@@ -7,8 +7,8 @@ class Index extends React.Component {
         return(
             <html>
             <DefaultLayout>
-                <a href="/bugs/new"><button>Create New Support Ticket</button></a>
-                <div class="card">
+                <div class="card index-card">
+                <h2 id="home-text">Home: All Bugs</h2>
                     {
                         bugs.map((bug) => (
                             <article>

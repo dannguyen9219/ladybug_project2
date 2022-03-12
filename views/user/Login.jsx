@@ -20,7 +20,7 @@ class Login extends React.Component {
 
                 <body>
                     <header>
-                        <div class="container-fluid">
+                        <div class="container-fluid" id="main-nav-bar">
                             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                 <ul class="nav justify-content-end">
                                     <li>

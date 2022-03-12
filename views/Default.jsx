@@ -17,7 +17,7 @@ class DefaultLayout extends React.Component {
 
                 <body>
                     <header>
-                        <div class="container-fluid">
+                        <div class="container-fluid" id="main-nav-bar">
                             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                 <ul class="nav justify-content-end">
                                     <li>
@@ -25,7 +25,7 @@ class DefaultLayout extends React.Component {
                                         <img src="/assets/ladybugLogo-plain-transparent.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />Home</a>
                                     </li>
                                     <li>
-                                        <a class="navbar-brand" href="/bugs/New">New Ticket</a>
+                                        <a class="navbar-brand" href="/bugs/New">New Bug</a>
                                     </li>
                                     <li>
                                         <a class="navbar-brand" href="/user/logout">Logout</a>
