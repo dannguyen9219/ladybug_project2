@@ -17,18 +17,18 @@ class DefaultLayout extends React.Component {
 
                 <body>
                     <header>
-                        <h1> LadyBug - A Bug Tracker App </h1>
-                        <div>
-                            <nav id="nav-btns">
+                        <div class="container-fluid">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                 <ul class="nav justify-content-end">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/bugs/"><button type="button" class="btn btn-outline-light">Home</button></a>
+                                    <li>
+                                        <a class="navbar-brand" href="/bugs/">
+                                        <img src="/assets/ladybugLogo-plain-transparent.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />Home</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/bugs/New"><button type="button" class="btn btn-outline-light">New Ticket</button></a>
+                                    <li>
+                                        <a class="navbar-brand" href="/bugs/New">New Ticket</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/user/logout"><button type="button" class="btn btn-outline-light">Logout</button></a>
+                                    <li>
+                                        <a class="navbar-brand" href="/user/logout">Logout</a>
                                     </li>
                                 </ul>
                             </nav>

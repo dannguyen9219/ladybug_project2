@@ -18,12 +18,13 @@ class Signup extends React.Component {
                 <link rel="shortcut icon" href="/assets/ladybugLogo-plain-transparent.png"></link>
             </head>
             <body>
-            <header>
+                <header>
                     <div class="container-fluid">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <ul class="nav justify-content-end">
                                 <li>
-                                    <a class="navbar-brand" href="/bugs/">Home</a>
+                                    <a class="navbar-brand" href="/bugs/">
+                                    <img src="/assets/ladybugLogo-plain-transparent.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />Home</a>
                                 </li>
                                 <li>
                                     <a class="navbar-brand" href="/bugs/New">New Ticket</a>

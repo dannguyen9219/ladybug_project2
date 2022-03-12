@@ -8,18 +8,21 @@ class Index extends React.Component {
             <html>
             <DefaultLayout>
                 <a href="/bugs/new"><button>Create New Support Ticket</button></a>
-                <div>
+                <div class="card">
                     {
                         bugs.map((bug) => (
                             <article>
-                                <a href={`/bugs/${ bug._id }`}>
-                                    <h3>Support Ticket: {bug.title}</h3>
-                                </a>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a href={`/bugs/${ bug._id }`}>
+                                            <h3>Bug Ticket: {bug.title}</h3>
+                                        </a>
+                                    </li>
+                                </ul>
                             </article>
                         ))
                     }
                 </div>
-                <a href="/user/logout"><button>Logout</button></a>
             </DefaultLayout>
             </html>
         )
