@@ -12,12 +12,16 @@ class Show extends React.Component {
                                 <h2 id="title">LadyBug: {bug.title}</h2>
                             </div>
                                 <article>
-                                    <div id="bugsList" class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <h2 id="category">Category: {bug.category}</h2>
-                                            <h2 id="status">Status: {bug.ticketStatus}</h2>
-                                            <h2 id="description">Description: {bug.description}</h2>
-                                            <h2 id="priority">Priority: {bug.priority}</h2>
+                                    <div id="bugsList">
+                                        <li id="listCategories" class="row">
+                                            <dt id="category" class="col-sm-3">Category: </dt>
+                                            <dd class="col-sm-9">{bug.category}</dd>
+                                            <dt id="status" class="col-sm-3">Status: </dt>
+                                            <dd class="col-sm-9">{bug.ticketStatus}</dd>
+                                            <dt id="description" class="col-sm-3">Description: </dt>
+                                            <dd class="col-sm-9">{bug.description}</dd>
+                                            <dt id="priority" class="col-sm-3">Priority: </dt>
+                                            <dd class="col-sm-9">{bug.priority}</dd>
                                         </li>
                                     </div>
                                 </article>

@@ -21,7 +21,7 @@ class Login extends React.Component {
                 <body>
                     <header>
                         <div class="container-fluid" id="main-nav-bar">
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="test">
                                 <ul class="nav justify-content-end">
                                     <li>
                                         <a class="navbar-brand" href="/bugs/">

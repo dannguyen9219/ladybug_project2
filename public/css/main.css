@@ -36,6 +36,16 @@ body {
     margin: 7% 20% 0% 20%;
 }
 
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
 /* header {
     background-color: rgb(231, 238, 238);
     padding: 0 5px;

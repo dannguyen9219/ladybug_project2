@@ -2,6 +2,20 @@ body {
     background-color: white;
 }
 
+#main-nav-bar {
+    padding: 0;
+}
+
+#ladybugLogo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+#test {
+    font-size: 1.5rem;
+}
+
 #fieldset {
     margin: 5% 30%;
 }
