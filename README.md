@@ -6,7 +6,7 @@ Ladybug is an easy-to-use web application that uses full CRUD and follows MVC. U
 
 ## **Background**
 
-"Bugs aren't the problem, they're features." In web development, we will always be working on projects, big and small, and in these projects will always be bugs. I wanted to create an app to be able to track my bugs. Software developers will always have them, so why not create an app to track them?
+"Bugs aren't the problem, they're features." In web development, we will always be working on projects, big and small, and in these projects will always have bugs. I wanted to create an app to be able to track my bugs. Software developers will always have them, so why not create an app to track them?
 
 ## **Technologies Used**
 
